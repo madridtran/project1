@@ -1,23 +1,29 @@
 ﻿<!DOCTYPE html>
 <html lang="en" ng-app="weatherApp">
-<head>
-    <meta charset="utf-8" />
-    <title>Dự báo thời tiết</title>
 
-    <!-- load boostrap -->
-    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-    <!-- load agulajs-->
+<head>
+    <title>AngularJS - Dự báo thời tiết</title>
+    <meta charset="utf-8">
+
+    <!-- load bootstrap via CDN -->
+    <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- load angularjs via CDN -->
     <script type="text/javascript" src="https://code.angularjs.org/1.4.9/angular.min.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/1.4.9/angular-route.min.js"></script>
     <script type="text/javascript" src="https://code.angularjs.org/1.4.9/angular-resource.min.js"></script>
 
-    <script src="app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
     <style>
-        *{
+        * { 
+        
             font-size: 1.05em;
         }
     </style>
+
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-inverse">
@@ -26,14 +32,26 @@
                     <a class="navbar-brand" href="/">Dự báo thời tiết</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#/">Home</a></li>
+                    <li><a href="#/">Trang Chủ</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <div class="container">
-        <div ng-view></div>
+        <div class="row">
+            <div class="col-md-6">
+                <div ng-view></div>
+            </div>
+            <div class="col-md-6">
+                <div ng-view></div>
+            </div>
+        </div>
 
     </div>
+
+  
+
 </body>
+
 </html>
